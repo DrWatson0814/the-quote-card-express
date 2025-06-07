@@ -1,6 +1,22 @@
 body {
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
     margin: 0;
     padding: 0;
-    border-image: url("/black-pinstripe-landscape-border.jpg");    
+    background-image: url("/landscape.jpg");
+}
+
+.quote-container {
+    align-items: center;
+    justify-items: center;
+}
+
+#quote {
+    color: white;
+}
+
+#author {
+    color: white;
 }
