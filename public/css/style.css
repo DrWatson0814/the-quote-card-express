@@ -1,11 +1,26 @@
 body {
     display: flex;
-    flex-direction: column;
+    height: 100vh;
+    flex-flow: row wrap;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
     background-image: url("/landscape.jpg");
+}
+
+.background-img {
+    background-image: url("../img/mitchell-luo-FWoq_ldWlNQ-unsplash.jpg");
+}
+
+
+
+.main {
+    flex-grow: 1 ;
+    margin: 25px;
+    border: 3px white solid;
+    padding-top: 350px;
+    padding-bottom: 300px;
 }
 
 .quote-container {
@@ -15,8 +30,30 @@ body {
 
 #quote {
     color: white;
+    font-size: 2.5em;
 }
+
 
 #author {
     color: white;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 768px) {
+    .main {
+        padding-top: 400px;
+    }
+    
+    #quote {
+        font-size: 1.5em;
+    }
+
+    #author {
+        font-size: 1em;
+    }
+
+
+    
 }
