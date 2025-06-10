@@ -19,7 +19,7 @@ body {
     flex-grow: 1 ;
     margin: 25px;
     border: 3px white solid;
-    padding-top: 350px;
+    padding-top: 300px;
     padding-bottom: 300px;
 }
 
@@ -33,6 +33,14 @@ body {
     font-size: 2.5em;
 }
 
+q::before {
+    font-size: 100px;
+}
+
+q::after {
+    font-size: 100px;
+}
+
 
 #author {
     color: white;
@@ -41,13 +49,21 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 725px) {
     .main {
         padding-top: 400px;
     }
     
     #quote {
         font-size: 1.5em;
+    }
+
+    q::before {
+        font-size: xx-large
+    }
+
+    q::after {
+        font-size: xx-large;
     }
 
     #author {
