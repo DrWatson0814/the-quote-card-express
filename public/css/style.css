@@ -1,9 +1,8 @@
 body {
   display: flex;
   height: 100vh;
-  flex-flow: row wrap;
-  align-content: center;
-  justify-content: flex-end;
+  width: 100%;
+  flex-flow: column wrap;
   margin: 0;
   padding: 0;
   background-image: url("/landscape.jpg");
@@ -11,6 +10,9 @@ body {
 
 .background-img {
   background-image: url("../img/mitchell-luo-FWoq_ldWlNQ-unsplash.jpg");
+  height: 100%;
+  width: 100%;
+  align-content: center;
 }
 
 .main {
@@ -18,35 +20,59 @@ body {
   margin: 25px;
   border: 3px white solid;
   padding-top: 300px;
-  padding-bottom: 300px;
+  padding-bottom: 285px;
 }
 
 .quote-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
 }
 
 #quote {
+  grid-row: 2;
+  display: flex;
+  flex-flow: row nowrap;
   color: white;
-  font-size: 2.5em;
+  font-size: 2rem;
+  font-family: "Brush Script MT";
+  /* font: normal 700 100px /3 'Brush Script MT' cursive; */
 }
 
 q::before {
-  font-size: 100px;
+  grid-row: 1;
+  font-size: 40px;
 }
 
 q::after {
-  font-size: 100px;
+  grid-row: 3;
+  font-size: 40px;
 }
 
 #author {
+  grid-row: 4;
   color: white;
-  font-size: 1.5em;
+  font-size: 1em;
   text-transform: uppercase;
+  margin-bottom: 0;
+  font-family: "Brush Script MT";
 }
 
-@media (max-width: 725px) {
+/* @media  (max-width: 725px) {
+
+  body {
+     flex-grow: 1; 
+    width: min-content;
+  }
+
+  .background-img {
+    flex-grow: 1;
+    width: 100vh;
+  }
   .main {
+    flex-grow: 1;
+    width: 100vh;
     padding-top: 400px;
   }
 
@@ -65,4 +91,4 @@ q::after {
   #author {
     font-size: 1em;
   }
-}
+}  */
