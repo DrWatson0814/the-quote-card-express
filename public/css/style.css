@@ -5,7 +5,7 @@ body {
   flex-flow: column wrap;
   margin: 0;
   padding: 0;
-  background-image: url("/landscape.jpg");
+  background-image: url("landscape.jpg");
 }
 
 .background-img {
@@ -80,15 +80,15 @@ q::after {
   }
 
   q::before {
-    height: max-content%;
+    height: max-content;
     width: 20%;
     font-size-adjust: 100px;
     font-size: 150px;
   }
 
-  q::after {
+  /* q::after {
 
-  } 
+  }  */
 
   #author {
     font-size: 1.75em;

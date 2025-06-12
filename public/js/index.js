@@ -58,7 +58,7 @@
 // }
 // getRandomImage();
 
-fetch('https://api.github.com/drwatson0814/the-quote-card-express')
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error(error));
+// fetch('https://api.github.com/drwatson0814/the-quote-card-express')
+// .then(response => response.json())
+// .then(data => console.log(data))
+// .catch(error => console.error(error));

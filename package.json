@@ -1,9 +1,9 @@
 {
   "name": "the-quote-card-express",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "./server.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,8 +13,5 @@
   "dependencies": {
     "express": "^5.1.0",
     "the-quote-card-express": "file:"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
   }
 }
