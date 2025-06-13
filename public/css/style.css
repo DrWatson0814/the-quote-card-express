@@ -11,6 +11,9 @@ body {
 .background-img {
   background-image: url("/img/landscape.jpg");
   height: 100vh;
+  margin-left: -25px;
+  margin-right: -25px;
+  grid-column: 2;
 }
 
 .main {
