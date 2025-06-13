@@ -5,11 +5,10 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-image: url("/img/landscape.jpg");
+  /* background-image: url("/img/landscape.jpg"); */
 }
 
 .background-img {
-  /* background-image: url("./img/mitchell-luo-FWoq_ldWlNQ-unsplash.jpg"); */
   background-image: url("/img/landscape.jpg");
   height: 100vh;
 }
