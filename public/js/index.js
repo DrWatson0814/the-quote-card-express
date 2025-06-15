@@ -1,64 +1,39 @@
 "use strict";
 
-// const elements = {
-//     quote: document.getElementById("quote"),
-//     author: document.getElementById("author"),};
+ const elements = {
+     quote: document.getElementById("quote"),
+     author: document.getElementById("author"),};
 
-// const quotes = [
-//     {
-//         quote: "All hands! Abandon ship!",
-//         author: "Captain Picard",
-//     },
+const quoteElement = document.getElementById('quote');
+const authorElement = document.getElementById('author');
 
-//     {
-//         quote: "Doh!",
-//         author: "Homer Simpson",
-//     },
+async function getRandomImage() {
+    const client_id = "-pVl70GaCiOLODQ4AsOz1k8Mn7smJjspf70fk0Vhego";
+    const endpoint = `https://api.unsplash.com/photos/random/?client_id=${client_id}`;
+    try {
+        const response = await fetch(endpoint);
+        const returnedData = await response.json();
+        console.log(returnedData);
+    } catch(error) {
+        console.log(error)
+    }
+}
 
-//     {
-//         quote: "The Internet is the first thing that humanity has built that humanity doesn't understand, the largest experiment               in anarchy that we have ever had.",
-//         author: "Eric Schmidt",
-//     }
-// ]
+ 
+ 
+ 
+ async function getRandomImage() {
+     const client_id = "-pVl70GaCiOLODQ4AsOz1k8Mn7smJjspf70fk0Vhego";
+     const endpoint = `https://api.unsplash.com/photos/random/?client_id=${client_id}`;
+     try {
+         const response = await fetch(endpoint);
+         const returnedData = await response.json();
+         const receivedPhotoUrl = returnedData.urls.regular;
+         const randomPic = document.querySelector('.background-img');
+         randomPic.style.backgroundImage = `url("${receivedPhotoUrl}")`
+     } catch (error) {
+         console.error(error)
+     }
+ }
+ getRandomImage();
 
-
-// function loopThroughQuotes() {
-//     let quoteIndex = 0;
-//     setInterval(() => {
-//         if (quoteIndex < quotes.length) {
-//             elements.quote.textContent = quotes[quoteIndex].quote;
-//             elements.author.textContent = quotes[quoteIndex].author;
-//             quoteIndex++;
-//         } else {
-//             quoteIndex = 0;
-//         }
-//     }, 3000);
-// }
-
-// setTimeout(loopThroughQuotes, 3000);
-
-
-
-
-// async function getRandomImage() {
-//     const client_id = "-pVl70GaCiOLODQ4AsOz1k8Mn7smJjspf70fk0Vhego";
-//     const endpoint = `https://api.unsplash.com/photos/random/?client_id=${client_id}`;
-//     try {
-//         const response = await fetch(endpoint);
-//         const returnedData = await response.json();
-//         const receivedPhotoUrl = returnedData.urls.regular;
-
-//         const randomPic = document.querySelector('.background-img');
-//         randomPic.style.backgroundImage = `url("${receivedPhotoUrl}")`
-
-
-//     } catch (error) {
-//         console.error(error)
-//     }
-// }
-// getRandomImage();
-
-// fetch('https://api.github.com/drwatson0814/the-quote-card-express')
-// .then(response => response.json())
-// .then(data => console.log(data))
-// .catch(error => console.error(error));
